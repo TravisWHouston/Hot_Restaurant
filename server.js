@@ -10,4 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 
 console.log(`ping`)
 
+require(`./routes/apiRoutes`)(app)
+require(`./routes/htmlRoutes`)(app)
+
 app.listen(3000)
