@@ -6,6 +6,9 @@
   <!-- Bootstrap Stylesheet -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
 
   <title>Resercvation</title>
 </head>
@@ -13,11 +16,11 @@
   <!--  -->
     <div class="container">
       <div class="jumbotron text-center">
-        <h1 class="display-4">Hot Restaurant</h1>
-        <p class="lead">We only have 5 tables! Book your seat before they are all gone</p>
+        <h1 class="display-4"><i class="fab fa-hotjar text-danger"></i> Hot Restaurant</h1>
+        <p class="lead">Make Your Reservation</p>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg" id="table" href="./tables.html" role="button">View Tables</a>
-        <a class="btn btn-info btn-lg" id="res" href="#" role="button">Home</a>
+        <a class="btn btn-primary btn-lg" id="table" href="./tables.html" role="button"><i class="fas fa-table"></i> View Tables</a>
+        <a class="btn btn-info btn-lg" id="res" href="./index.html" role="button"><i class="fas fa-home text-white"></i></a>
       </div>
     </div>
 
@@ -28,7 +31,7 @@
   <div class="container">
 
     <div class="card shadow-sm p-3 mb-5 bg-white rounded">
-      <h5 class="card-header">Make a Reservation</h5>
+      <h5 class="card-header bg-info text-white">Make a Reservation</h5>
       <div class="card-body">
         
         <div class="form-group">
@@ -51,7 +54,7 @@
           <input type="text" class="form-control" id="uniqueId" placeholder="Unique ID">
         </div>
         
-        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="submit" class="btn btn-info">Submit</button>
       </div>
     </div>
   
@@ -60,14 +63,17 @@
 
 <!-- JavaScript for Reservation Form -->
 <script>
+  // click event for the reservation form submit btn
 document.getElementById(`submit`).addEventListener(`click`, e =>{
 e.preventDefault()
 
+//put all form values into variables
 let nameInput = document.getElementById(`nameInput`).value
 let phoneInput = document.getElementById(`phoneNum`).value
 let emailInput = document.getElementById(`emailInput`).value
 let uniqueId = document.getElementById(`uniqueId`).value
 
+//create an object for reservation form inputs
 const reserve = {
   name: nameInput,
   phone: phoneInput,
@@ -75,11 +81,13 @@ const reserve = {
   uniqueId: uniqueId
 }
 
+//clear form
  document.getElementById(`nameInput`).value = ``
  document.getElementById(`phoneNum`).value = ``
  document.getElementById(`emailInput`).value = ``
  document.getElementById(`uniqueId`).value = ``
 
+//testing
 console.log(reserve)
 
 })
