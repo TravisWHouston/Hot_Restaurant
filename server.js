@@ -10,4 +10,4 @@ app.use(express.urlencoded({ extended: true }))
 
 console.log(`ping`)
 
-app.listen(3000)
+const PORT = process.env.PORT || 3000
