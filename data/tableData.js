@@ -1,8 +1,8 @@
 const tableArray = [{
-  ID: ,
-  Name: ,
-  Email: ,
-  Phone:
+  ID: `${uniqueId}`,
+  Name: `${nameInput}`,
+  Email: `${emailInput}`,
+  Phone: `${phoneInput}`
 }]
 
 module.exports = tableArray
